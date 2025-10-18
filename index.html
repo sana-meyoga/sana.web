@@ -215,20 +215,20 @@
           </ul>
         </div>
 
-        <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+     <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
           <label>
             Nombre
-            <input type="text" name="name" required>
+            <input type="text" name="nombre" required autocomplete="nombre">
           </label>
 
           <label>
             Correo
-            <input type="email" name="email" required>
+            <input type="email" name="email" required autocomplete="email">
           </label>
 
           <label>
             Mensaje
-            <textarea name="message" rows="5" required></textarea>
+            <textarea name="mensaje" rows="5" required autocomplete="off"></textarea>
           </label>
 
           <div class="form-actions">
@@ -281,7 +281,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   }
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbx4hXLfsTGKKvQWq1eYuFXSPAVuoYSzEu3JSn3vjUDKU9sr95ImNt3vqypVmeytrkY/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbzHbsZfKjMnaHu8KVZZNJVd59bzRWKtVipag4gmwDFs0-G9CdZAOXWi4BtgiMCjuRk/exec", {
       method: "POST",
       body: data,
       headers: {
@@ -302,6 +302,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 </body>
 </html>
+
 
 
 
