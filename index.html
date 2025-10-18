@@ -223,7 +223,7 @@
 
           <label>
             Correo
-            <input type="email" name="email" required autocomplete="email">
+            <input type="correo" name="correo" required autocomplete="correo">
           </label>
 
           <label>
@@ -281,7 +281,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   }
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbzHbsZfKjMnaHu8KVZZNJVd59bzRWKtVipag4gmwDFs0-G9CdZAOXWi4BtgiMCjuRk/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbzLklyjHVFkFxBQ-jsBug1Qfz5EWaNt38xbIIpFqDUPW_v6iDZWgnBQQyuB42FHv54/exec", {
       method: "POST",
       body: data,
       headers: {
@@ -302,6 +302,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 </body>
 </html>
+
 
 
 
