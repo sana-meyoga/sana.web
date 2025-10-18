@@ -271,19 +271,16 @@
     });
   });
 
-  // Formulario — conexión con Google Apps Script
+  // ✅ FORMULARIO — conexión con Google Apps Script
   document.getElementById("contactForm").addEventListener("submit", async function(e) {
     e.preventDefault();
-    const data = {
-      nombre: this.nombre.value,
-      correo: this.correo.value,
-      mensaje: this.mensaje.value
-    };
+
+    const formData = new FormData(this);
+
     try {
       await fetch("https://script.google.com/macros/s/AKfycbyON3wT58osybklPF17Tsptdid1X-w8AqAcnKDULrPWdfGdfOV_5pGDfj9JS7uGfNvYgQ/exec", {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data)
+        body: formData
       });
       alert("Gracias 🌿 Tu mensaje fue enviado correctamente. Te responderé pronto.");
       this.reset();
@@ -297,7 +294,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-
 </body>
 </html>
+
 
