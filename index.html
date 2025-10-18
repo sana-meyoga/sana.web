@@ -256,7 +256,7 @@
     mainNav.classList.toggle('open');
   });
 
-  // Smooth scroll for internal links
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function(e){
       const target = document.querySelector(this.getAttribute('href'));
@@ -271,17 +271,33 @@
     });
   });
 
-  // Simple contact form handler (placeholder)
-  function submitForm(e) {
+  // Formulario — conexión con Google Apps Script
+  document.getElementById("contactForm").addEventListener("submit", async function(e) {
     e.preventDefault();
-    // Simple client feedback — reemplazar con integración real (email API)
-    alert('Gracias — tu mensaje fue enviado. Responderé pronto.');
-    e.target.reset();
-  }
+    const data = {
+      nombre: this.nombre.value,
+      correo: this.correo.value,
+      mensaje: this.mensaje.value
+    };
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbyON3wT58osybklPF17Tsptdid1X-w8AqAcnKDULrPWdfGdfOV_5pGDfj9JS7uGfNvYgQ/exec", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)
+      });
+      alert("Gracias 🌿 Tu mensaje fue enviado correctamente. Te responderé pronto.");
+      this.reset();
+    } catch (error) {
+      alert("Lo siento 😔, ocurrió un error al enviar el mensaje. Intenta más tarde.");
+      console.error(error);
+    }
+  });
 
-  // Year in footer
+  // Año dinámico en el footer
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+
 </body>
 </html>
+
