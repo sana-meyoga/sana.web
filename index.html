@@ -271,41 +271,38 @@
     });
   });
 
-  // ✅ FORMULARIO — conexión con Google Apps Script
-  document.getElementById("contactForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
+ // ✅ FORMULARIO — conexión con Google Apps Script
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
 
-    const formData = new FormData(this);
+  const data = new URLSearchParams();
+  for (const pair of new FormData(this)) {
+    data.append(pair[0], pair[1]);
+  }
 
-    try {
-      const data = new URLSearchParams();
-for (const pair of new FormData(this)) {
-  data.append(pair[0], pair[1]);
-}
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbxqd5bYgkjt8-_XbygnB_a5aj7duhre6Ij8vbMk4Mx4vyGINwIDZY_UUurHt6ftdWRr/exec", {
+      method: "POST",
+      body: data,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
 
-await fetch("https://script.google.com/macros/s/AKfycbxqd5bYgkjt8-_XbygnB_a5aj7duhre6Ij8vbMk4Mx4vyGINwIDZY_UUurHt6ftdWRr/exec", {
-  method: "POST",
-  body: data,
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded"
+    alert("Gracias 🌿 Tu mensaje fue enviado correctamente. Te responderé pronto.");
+    this.reset();
+  } catch (error) {
+    alert("Lo siento 😔, ocurrió un error al enviar el mensaje. Intenta más tarde.");
+    console.error(error);
   }
 });
-
-      });
-      alert("Gracias 🌿 Tu mensaje fue enviado correctamente. Te responderé pronto.");
-      this.reset();
-    } catch (error) {
-      alert("Lo siento 😔, ocurrió un error al enviar el mensaje. Intenta más tarde.");
-      console.error(error);
-    }
-  });
-
   // Año dinámico en el footer
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
 
 
 
