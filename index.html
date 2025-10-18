@@ -278,9 +278,19 @@
     const formData = new FormData(this);
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycby323Bq98befTJ8ppfwlsMiqXfNi63maNUKAGnt4hL7NGi964cCtrg8EbujwsXuMHwJBg/exec", {
-        method: "POST",
-        body: formData
+      const data = new URLSearchParams();
+for (const pair of new FormData(this)) {
+  data.append(pair[0], pair[1]);
+}
+
+await fetch("https://script.google.com/macros/s/AKfycbxD4CPtdHcrKOupeQRkCW9MFrBAYUgrlmJlXiNZxt6JyfEFESV6f9ug211TON8P_KGcBQ/exec", {
+  method: "POST",
+  body: data,
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  }
+});
+
       });
       alert("Gracias 🌿 Tu mensaje fue enviado correctamente. Te responderé pronto.");
       this.reset();
@@ -296,6 +306,7 @@
 
 </body>
 </html>
+
 
 
 
