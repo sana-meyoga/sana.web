@@ -291,53 +291,50 @@ body{
   /* Contenedor del menú móvil */
 .main-nav {
   position: fixed;
-  top: 72px;
+  top: 0;
   right: 0;
   width: 100%;
-  height: calc(100% - 72px);
-  background-color: #ffffff; /* Fondo sólido */
+  height: 100vh; /* cubre toda la pantalla */
+  background-color: #ffffff; /* fondo sólido */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border-radius: 0;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
-  padding: 2rem 1.5rem;
+  padding: 6rem 1.5rem 2rem; /* deja espacio para el logo arriba */
   z-index: 10000;
-  overflow-y: auto; /* para que el menú sea desplazable si hay muchos ítems */
+  overflow-y: auto;
 }
 
-
-  .main-nav.open {
-    transform: translateY(0);
-  }
-
-  /* Lista del menú */
-  .main-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  /* Enlaces del menú */
-  .main-nav a {
-    display: block;
-    padding: 0.9rem 1rem;
-    border-radius: 8px;
-    background-color: #ffffff;
-    color: #3a2d1a;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .main-nav a:hover {
-    background-color: #f3efe7; /* beige suave */
-    color: #7c8f3f;
-  }
+.main-nav.open {
+  transform: translateY(0);
 }
+
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #3a2d1a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #f3efe7;
+  color: #7c8f3f;
+}
+}
+
 
 
 
