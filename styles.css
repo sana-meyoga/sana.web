@@ -302,30 +302,3 @@ nav ul li a {
   text-decoration: none;
 }
 }
-/* Fondo visible para el menú móvil */
-@media {
-nav ul {
-  background-color: #fdfcf8; /* un tono beige claro acorde a tu paleta */
-  backdrop-filter: blur(6px); /* opcional, para un efecto suave */
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* Asegura buena legibilidad */
-nav ul li a {
-  color: #3a2d1a; /* marrón oscuro elegante */
-  font-weight: 500;
-}
-}
-/* Cuando esté activo en móvil */
-@media (max-width: 768px) {
-  nav ul {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-  }
-}
-
