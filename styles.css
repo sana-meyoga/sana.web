@@ -278,60 +278,43 @@ body{
   font-weight: 500;
 }
 
-/* === Responsive === */
-@media (max-width: 900px) {
+/* --- MENÚ MÓVIL --- */
+nav ul {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  list-style: none;
+  background-color: #ffffff !important; /* blanco sólido */
+  opacity: 1 !important; /* sin transparencia */
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999; /* asegura que quede por encima */
+}
 
-  /* Estructura general */
-  .hero-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-  .section-grid, .contact-grid { grid-template-columns: 1fr; }
+nav ul li {
+  text-align: center;
+}
 
-  /* Botón hamburguesa */
-  .menu-toggle { display: block; }
+nav ul li a {
+  display: block;
+  color: #4a3b2f; /* tono marrón suave para armonizar con tu logo */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #ffffff !important; /* fondo blanco sólido */
+  transition: background-color 0.2s ease;
+}
 
-  /* Contenedor del menú móvil */
-  .main-nav {
-    position: fixed;
-    top: 72px;
-    right: 0;
-    background: rgba(253, 252, 248, 0.95); /* tono beige suave */
-    height: calc(100% - 72px);
-    width: 260px;
-    transform: translateX(110%);
-    transition: transform 0.28s ease;
-    box-shadow: -6px 0 18px rgba(20, 20, 20, 0.06);
-    padding: 1rem;
-    backdrop-filter: blur(8px);
-    border-radius: 0 0 0 16px;
-    z-index: 9999;
-  }
+nav ul li a:hover {
+  background-color: #e7e4da; /* beige suave al pasar el cursor */
+}
 
-  /* Cuando está abierto */
-  .main-nav.open { transform: translateX(0); }
-
-  /* Lista del menú */
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    background: transparent;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Enlaces del menú */
-  .main-nav a {
-    display: block;
-    padding: 0.8rem;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #3a2d1a; /* marrón oscuro elegante */
-    font-weight: 500;
-    font-size: 1.05rem;
-    background-color: rgba(255, 255, 255, 0.7); /* 💛 fondo visible */
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-
-  .main-nav a:hover {
-    background-color: #f2efea; /* tono beige más cálido al pasar el dedo */
-    color: #7c8f3f;
-  }
+/* mostrar menú cuando el botón esté activo */
+nav.active ul {
+  display: flex;
 }
