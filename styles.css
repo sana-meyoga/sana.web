@@ -278,21 +278,26 @@ body{
   font-weight: 500;
 }
 
-/* --- MENÚ MÓVIL --- */
+/* --- MENÚ MÓVIL CORREGIDO --- */
+nav {
+  position: relative;
+  z-index: 9999;
+}
+
 nav ul {
   position: absolute;
   top: 70px;
   right: 10px;
   list-style: none;
-  background-color: #ffffff !important; /* blanco sólido */
-  opacity: 1 !important; /* sin transparencia */
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
+  background-color: #ffffff !important; /* Fondo blanco sólido */
+  opacity: 1 !important;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra más definida */
   display: none;
   flex-direction: column;
   gap: 10px;
-  z-index: 9999; /* asegura que quede por encima */
+  z-index: 9999;
 }
 
 nav ul li {
@@ -301,20 +306,20 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  color: #4a3b2f; /* tono marrón suave para armonizar con tu logo */
+  color: #4a3b2f; /* marrón suave */
   text-decoration: none;
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border-radius: 8px;
-  background-color: #ffffff !important; /* fondo blanco sólido */
-  transition: background-color 0.2s ease;
+  background-color: #ffffff; /* Fondo blanco */
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-  background-color: #e7e4da; /* beige suave al pasar el cursor */
+  background-color: #e7e4da; /* beige claro */
+  color: #2e261e;
 }
 
-/* mostrar menú cuando el botón esté activo */
 nav.active ul {
   display: flex;
 }
