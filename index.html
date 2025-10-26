@@ -218,19 +218,19 @@
      <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
           <label>
             Nombre
-            <input type="text" name="nombre" required autocomplete="nombre">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
           </label>
 
           <label>
             Correo
-            <input type="email" name="email" required autocomplete="email">
+            <input type="email" name="email" placeholder="Tu correo" required autocomplete="email">
           </label>
 
           <label>
             Mensaje
-            <textarea name="mensaje" rows="5" required autocomplete="off"></textarea>
+            <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required autocomplete="off"></textarea>
           </label>
-
+		 
           <div class="form-actions">
             <button type="submit" class="btn primary">Enviar mensaje</button>
             <button type="reset" class="btn ghost">Limpiar</button>
@@ -304,6 +304,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 </body>
 </html>
+
 
 
 
