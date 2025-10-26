@@ -278,48 +278,63 @@ body{
   font-weight: 500;
 }
 
-/* --- MENÚ MÓVIL CORREGIDO --- */
-nav {
-  position: relative;
-  z-index: 9999;
+/* === MENÚ MÓVIL CORREGIDO === */
+@media (max-width: 900px) {
+
+  /* Estructura general */
+  .hero-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .section-grid, .contact-grid { grid-template-columns: 1fr; }
+
+  /* Botón hamburguesa */
+  .menu-toggle { display: block; z-index: 10001; }
+
+  /* Contenedor del menú móvil */
+  .main-nav {
+    position: fixed;
+    top: 72px;
+    right: 0;
+    width: 260px;
+    height: calc(100% - 72px);
+    background-color: #ffffff; /* Fondo sólido */
+    box-shadow: -6px 0 18px rgba(20, 20, 20, 0.1);
+    border-radius: 0 0 0 16px;
+    transform: translateX(110%);
+    transition: transform 0.3s ease-in-out;
+    padding: 1.5rem 1rem;
+    z-index: 10000;
+  }
+
+  .main-nav.open {
+    transform: translateX(0);
+  }
+
+  /* Lista del menú */
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Enlaces del menú */
+  .main-nav a {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #3a2d1a;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .main-nav a:hover {
+    background-color: #f3efe7; /* beige suave */
+    color: #7c8f3f;
+  }
 }
 
-nav ul {
-  position: absolute;
-  top: 70px;
-  right: 10px;
-  list-style: none;
-  background-color: #ffffff !important; /* Fondo blanco sólido */
-  opacity: 1 !important;
-  padding: 12px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra más definida */
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 9999;
-}
 
-nav ul li {
-  text-align: center;
-}
-
-nav ul li a {
-  display: block;
-  color: #4a3b2f; /* marrón suave */
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background-color: #ffffff; /* Fondo blanco */
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-nav ul li a:hover {
-  background-color: #e7e4da; /* beige claro */
-  color: #2e261e;
-}
-
-nav.active ul {
-  display: flex;
-}
