@@ -279,6 +279,7 @@ body{
 }
 
 /* Ajuste menú móvil */
+@media  {
 nav ul {
   position: absolute;
   top: 60px; /* o el alto de tu barra superior */
@@ -300,8 +301,9 @@ nav ul li a {
   color: #333;
   text-decoration: none;
 }
-
+}
 /* Fondo visible para el menú móvil */
+@media {
 nav ul {
   background-color: #fdfcf8; /* un tono beige claro acorde a tu paleta */
   backdrop-filter: blur(6px); /* opcional, para un efecto suave */
@@ -314,7 +316,7 @@ nav ul li a {
   color: #3a2d1a; /* marrón oscuro elegante */
   font-weight: 500;
 }
-
+}
 /* Cuando esté activo en móvil */
 @media (max-width: 768px) {
   nav ul {
@@ -326,3 +328,4 @@ nav ul li a {
     z-index: 9999;
   }
 }
+
