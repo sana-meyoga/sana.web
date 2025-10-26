@@ -326,4 +326,33 @@ nav ul li a {
     z-index: 9999;
   }
 }
+/* --- Unificar estilo del menú móvil con escritorio --- */
+@media (max-width: 768px) {
+  .main-nav {
+    background: url('assets/acuarela.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .main-nav ul {
+    background: transparent; /* deja ver la textura */
+    backdrop-filter: blur(8px);
+    border-radius: 0 0 14px 14px;
+  }
+
+  .main-nav a {
+    color: var(--text);
+    font-weight: 500;
+    padding: 0.8rem;
+    border-radius: 10px;
+  }
+
+  .main-nav a:hover {
+    background: var(--glass);
+    color: var(--accent-2);
+  }
+}
+
 
