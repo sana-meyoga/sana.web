@@ -113,6 +113,26 @@ body{
 .contact-form label{display:block;margin-bottom:0.6rem;font-size:0.95rem}
 .contact-form input, .contact-form textarea{width:100%;padding:0.6rem;border:1px solid rgba(0,0,0,0.06);border-radius:8px;margin-top:0.3rem;font-size:0.95rem}
 
+/* Iconos de redes sociales */
+.social-icons {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.social-icons img {
+  width: 16px;       /* tamaño mucho más pequeño */
+  height: 16px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  }
+    
+.social-icons a:hover img {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
 /* Footer */
 .site-footer{padding:2rem 0;background:transparent;border-top:1px solid rgba(0,0,0,0.03)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
@@ -278,6 +298,7 @@ body{
   font-weight: 500;
 }
 
+
 /* === MENÚ MÓVIL CORREGIDO === */
 @media (max-width: 900px) {
 
@@ -333,27 +354,8 @@ body{
   background-color: #f3efe7;
   color: #7c8f3f;
 }
-
-  /* Iconos de redes sociales */
-.social-icons {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  margin-top: 0.8rem;
 }
 
-.social-icons img {
-  width: 16px;       /* tamaño mucho más pequeño */
-  height: 16px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-  }
-    
-.social-icons a:hover img {
-  transform: scale(1.15);
-  opacity: 0.8;
-}
 
-}
 
 
