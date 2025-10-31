@@ -280,8 +280,7 @@ body{
   font-weight: 500;
 }
 
-
-/* Iconos de redes sociales */
+ /* Iconos de redes sociales */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -290,9 +289,9 @@ body{
   justify-content: flex-start;
 }
 
-social-icons img {
-  width: 28px; /* tamaño más visible */
-  height: 28px;
+.social-icons img {
+  width: 26px;  /* tamaño base (escritorio) */
+  height: 26px;
   object-fit: contain;
   opacity: 0.9;
   transition: transform 0.25s ease, opacity 0.25s ease;
@@ -300,19 +299,17 @@ social-icons img {
 
 /* Hover */
 .social-icons a:hover img {
-  transform: scale(1.15);
+  transform: scale(1.12);
   opacity: 1;
 }
 
-/* Aumenta tamaño en pantallas grandes */
-@media (min-width: 600px) {
+/* Para pantallas pequeñas (móvil) */
+@media (max-width: 600px) {
   .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 }
-
-
 
 /* === MENÚ MÓVIL CORREGIDO === */
 @media (max-width: 900px) {
@@ -370,6 +367,7 @@ social-icons img {
   color: #7c8f3f;
 }
 }
+
 
 
 
