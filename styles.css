@@ -113,7 +113,44 @@ body{
 .contact-form label{display:block;margin-bottom:0.6rem;font-size:0.95rem}
 .contact-form input, .contact-form textarea{width:100%;padding:0.6rem;border:1px solid rgba(0,0,0,0.06);border-radius:8px;margin-top:0.3rem;font-size:0.95rem}
 
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: left; /* Alinea todo a la izquierda */
+}
 
+.contact-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.contact-list li strong {
+  min-width: 120px; /* ancho fijo del título ("Email:", etc.) */
+  font-weight: 600;
+}
+
+/* redes sociales dentro del li */
+.contact-list li.redes .social-icons {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.contact-list li.redes img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-list li.redes a:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
 
 /* Footer */
 .site-footer{padding:2rem 0;background:transparent;border-top:1px solid rgba(0,0,0,0.03)}
@@ -369,6 +406,7 @@ body{
   color: #7c8f3f;
 }
 }
+
 
 
 
