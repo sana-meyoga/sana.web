@@ -152,6 +152,20 @@ body{
   opacity: 0.8;
 }
 
+.social-icons img {
+  width: 42px;  /* tamaño base visible en PC */
+  height: 42px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* cuando sea móvil */
+@media (max-width: 768px) {
+  .social-icons img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
 /* Footer */
 .site-footer{padding:2rem 0;background:transparent;border-top:1px solid rgba(0,0,0,0.03)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
@@ -317,39 +331,6 @@ body{
   font-weight: 500;
 }
 
- 
-/* Iconos de redes sociales */
-.social-icons {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  margin-top: 0.8rem;
-  justify-content: flex-start;
-}
-
-/* Tamaño base (móvil) */
-.social-icons img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-/* Hover */
-.social-icons a:hover img {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-/* En pantallas grandes, se agrandan ligeramente */
-@media (min-width: 900px) {
-  .social-icons img {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-
 /* === MENÚ MÓVIL CORREGIDO === */
 @media (max-width: 900px) {
 
@@ -406,6 +387,7 @@ body{
   color: #7c8f3f;
 }
 }
+
 
 
 
