@@ -305,7 +305,7 @@ social-icons img {
 }
 
 /* Aumenta tamaño en pantallas grandes */
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .social-icons img {
     width: 24px;
     height: 24px;
@@ -370,6 +370,7 @@ social-icons img {
   color: #7c8f3f;
 }
 }
+
 
 
 
