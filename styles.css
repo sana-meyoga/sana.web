@@ -284,31 +284,31 @@ body{
 /* Iconos de redes sociales */
 .social-icons {
   display: flex;
-  gap: 0.8rem;
+  gap: 1rem;
   align-items: center;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   justify-content: flex-start;
 }
 
-/* Tamaño base (móvil) */
-.social-icons img {
-  width: 32px;
-  height: 32px;
+social-icons img {
+  width: 28px; /* tamaño más visible */
+  height: 28px;
   object-fit: contain;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.9;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 /* Hover */
 .social-icons a:hover img {
-  transform: scale(1.1);
-  opacity: 0.8;
+  transform: scale(1.15);
+  opacity: 1;
 }
 
 /* Aumenta tamaño en pantallas grandes */
 @media (min-width: 900px) {
   .social-icons img {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -370,6 +370,7 @@ body{
   color: #7c8f3f;
 }
 }
+
 
 
 
