@@ -90,8 +90,42 @@
         <div class="cards">
           <article class="card">
             <h3><span class="rosa">Clases grupales semanales</span></h3>
-            <p>Sesiones en línea y presenciales, 60 min. Secuencias adaptadas por nivel.</p>
-            <p class="muted">Horarios y matrícula en el formulario.</p>
+            <p>Sesiones en línea, 60 min. Secuencias adaptadas por nivel.</p>
+             <div class="class-info">
+              <p>Explora una práctica constante y consciente. 
+               Cada clase integra respiración, movimiento y presencia, adaptándose al ritmo y experiencia de cada participante.</p>
+               <button class="toggle-form-btn">Ver horarios y matrícula</button>
+      </div>
+
+    <form class="class-form hidden" action="https://formspree.io/f/tu_codigo_aqui" method="POST">
+     <label for="name">Nombre completo</label>
+     <input type="text" id="name" name="name" required>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="modality">Modalidad preferida</label>
+    <select id="modality" name="modality" required>
+      <option value="">Selecciona una opción</option>
+      <option value="online">En línea</option>
+      <option value="presencial">Presencial</option>
+      <option value="ambas">Ambas</option>
+    </select>
+
+    <label for="level">Nivel de práctica</label>
+    <select id="level" name="level">
+      <option value="">Selecciona tu nivel</option>
+      <option value="principiante">Principiante</option>
+      <option value="intermedio">Intermedio</option>
+      <option value="avanzado">Avanzado</option>
+    </select>
+
+    <label for="message">Mensaje o comentario (opcional)</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Enviar solicitud</button>
+  </form>
+</section>
           </article>
 
           <article class="card">
@@ -327,6 +361,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 </body>
 </html>
+
 
 
 
