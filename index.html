@@ -97,7 +97,7 @@
                <button class="toggle-form-btn">Ver horarios y matrícula</button>
       </div>
 
-    <form class="class-form hidden" action="https://formspree.io/f/tu_codigo_aqui" method="POST">
+    <form class="class-form hidden" action="AKfycbxLTm-nJairIofnZH_CKoAJBJWSJdJdCFChizeUMQufMOa0OWXBzOx3sKLAILF4VGA" method="POST" id="formClases">
      <label for="name">Nombre completo</label>
      <input type="text" id="name" name="name" required>
 
@@ -369,8 +369,32 @@ document.getElementById("contactForm").addEventListener("submit", async function
         : 'Ocultar formulario';
     });
   </script>
+				<script>
+document.getElementById('formClases').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    modality: this.modality.value,
+    level: this.level.value,
+    message: this.message.value
+  };
+
+  await fetch(this.action, {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: { 'Content-Type': 'application/json' }
+  });
+
+  alert('Formulario enviado correctamente 🌿');
+  this.reset();
+});
+</script>
+
 </body>
 </html>
+
 
 
 
