@@ -469,7 +469,7 @@ body{
 }
 
 .toggle-form-btn {
-  background-color: var(--verde);
+  background-color: #9ca78c;
   color: #fff;
   font-family: inherit; /* usa la misma fuente del resto del sitio */
   font-size: 1rem;
@@ -479,16 +479,18 @@ body{
   padding: 0.6rem 1.2rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  outline: none;
 }
 
 .toggle-form-btn:hover {
-  background-color: #6d8b74; /* un tono verde un poco más oscuro */
+  background-color: #9ca78c; /* un tono verde un poco más oscuro */
 }
 
 @keyframes fadeIn {
   from {opacity: 0; transform: translateY(-5px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
 
 
 
