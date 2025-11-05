@@ -388,8 +388,25 @@ body{
 }
 }
 
+.class-form {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.toggle-form-btn {
+  margin-top: 0.8rem;
+  display: inline-block;
+}
+
+.card form,
+.card button {
+  max-width: 100%;
+}
+
+
 .hidden {
   display: none;
+}
 }
 
 
