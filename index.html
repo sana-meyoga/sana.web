@@ -358,9 +358,20 @@ document.getElementById("contactForm").addEventListener("submit", async function
   // Año dinámico en el footer
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+ <script>
+    const toggleBtn = document.querySelector('.toggle-form-btn');
+    const form = document.querySelector('.class-form');
 
+    toggleBtn.addEventListener('click', () => {
+      form.classList.toggle('hidden');
+      toggleBtn.textContent = form.classList.contains('hidden') 
+        ? 'Ver horarios y matrícula' 
+        : 'Ocultar formulario';
+    });
+  </script>
 </body>
 </html>
+
 
 
 
