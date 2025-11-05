@@ -372,32 +372,34 @@ document.getElementById("contactForm").addEventListener("submit", async function
 document.getElementById('formClases').addEventListener('submit', async function(e) {
   e.preventDefault();
 
-  const data = new URLSearchParams();
-  for (const pair of new FormData(this)) {
-    data.append(pair[0], pair[1]);
-  }
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    modality: this.modality.value,
+    level: this.level.value,
+    message: this.message.value
+  };
 
-  try {
-    await fetch(this.action, {
-      method: 'POST',
-      body: data,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-      }
-    });
+  const response = await fetch(this.action, {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: { 'Content-Type': 'application/json' }
+  });
 
-    alert('Formulario enviado correctamente 🌿');
+  if (response.ok) {
+    alert('🌿 Tu solicitud fue enviada correctamente.');
     this.reset();
-  } catch (error) {
-    alert('Lo siento 😔, ocurrió un error al enviar la solicitud. Intenta más tarde.');
-    console.error(error);
+  } else {
+    alert('Ocurrió un error al enviar el formulario. Intenta de nuevo.');
   }
 });
+
 </script>
 
 
 </body>
 </html>
+
 
 
 
