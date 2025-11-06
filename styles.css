@@ -493,6 +493,11 @@ body{
   to {opacity: 1; transform: translateY(0);}
 }
 
+.post p.muted {
+  font-weight: 400;
+}
+
+
 
 
 
